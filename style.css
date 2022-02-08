@@ -41,6 +41,9 @@ body {
 	margin-top: 2vw;
 	text-align: center;
 }
+.box:last-child {
+	margin-bottom: 2vw;
+}
 
 .box > img {
 	max-width: 95%;
