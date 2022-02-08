@@ -1,0 +1,81 @@
+:root {
+	--background: #2E3440;
+	--secondary: #3B4252;
+	--foreground: #D8DEE9;
+	--foreground-secondary: #E5E9F0;
+	--accent: #81A1C1;
+	--selected: #5E81AC;
+	--report: #BF616A;
+
+	--font: 'Lato';
+	--bold-font: 'Cantarell';
+
+	--radius: 15px;
+}
+
+
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	margin: 0;
+	font-family: var(--font), sans-serif;
+}
+
+.titlebar {
+	font-family: var(--bold-font), sans-serif;
+	font-size: 4rem;
+	text-align: center;
+	background-color: var(--secondary);
+	width: 100%;
+}
+
+.content {
+	display: grid;
+	place-items: center;
+}
+.box {
+	width: 45%;
+	background-color: var(--secondary);
+	align-items: center;
+	border-radius: var(--radius);
+	margin-top: 2vw;
+	text-align: center;
+}
+
+.box > img {
+	max-width: 95%;
+	height: auto;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	margin-top: 2.5%;
+	border-radius: var(--radius);
+	display: block;
+}
+
+.box > span {
+	font-size: 2vw;
+	font-family: var(--bold-font), sans-serif;	
+}
+.box > p {
+	color: var(--foreground-secondary);
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+
+.box > .button {
+	background-color: var(--accent);
+	border-radius: var(--radius);
+	text-decoration: none;
+	color: var(--foreground);
+	padding: 1vw;
+}
+.box > .button:hover {
+	animation-name: button;
+  	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes button {
+  from {background-color: var(--accent);}
+  to {background-color: var(--selected);}
+}
